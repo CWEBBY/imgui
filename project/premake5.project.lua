@@ -6,7 +6,7 @@ project "imgui"
 
     includedirs
 	{
-		IMGUI_DIR,
+		"..",
 	
 		SDL_DIR .. "/include/",
 	}
@@ -18,13 +18,13 @@ project "imgui"
 
 	files 
 	{ 
-		IMGUI_DIR .. "/*.h",
-		IMGUI_DIR .. "/*.cpp",
+		"../*.h",
+		"../*.cpp",
 		
-		IMGUI_DIR .. "/backends/imgui_impl_opengl3.cpp",
-		IMGUI_DIR .. "/backends/imgui_impl_opengl3.h",
-		IMGUI_DIR .. "/backends/imgui_impl_sdl3.cpp",
-		IMGUI_DIR .. "/backends/imgui_impl_sdl3.h"
+		"../backends/imgui_impl_opengl3.cpp",
+		"../backends/imgui_impl_opengl3.h",
+		"../backends/imgui_impl_sdl3.cpp",
+		"../backends/imgui_impl_sdl3.h"
 	}
 	
 filter { "system:windows", "architecture:x86_64" }

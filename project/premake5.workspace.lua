@@ -1,6 +1,6 @@
-workspace "AXL"
+workspace "imgui"
 	location 		( _ACTION ) 
-	startproject 	(   "AXL3" )
+	startproject 	(   "imgui" )
 	configurations 	{ "Debug", "Release" }  
 	platforms 		{ "x64" } -- Add x86, ARM and ARM64  
 
@@ -18,5 +18,7 @@ filter { "system:windows", "architecture:x86_64" }
 	targetdir "../lib/VisualC/x64"
 filter { "system:linux", "architecture:x86_64" }
 	targetdir "../lib/GCC/x64"
+
+SDL_DIR = "../../SDL"
 
 include "premake5.project.lua"
