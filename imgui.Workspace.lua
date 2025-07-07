@@ -1,7 +1,7 @@
 workspace "imgui"
-	location 		( _ACTION ) 
-	startproject 	(   "imgui" )
+	location 		( "project/" .. _ACTION ) 
 	configurations 	{ "Debug", "Release" }  
+	startproject 	( "imgui" )
 	platforms 		{ "x64" } -- Add x86, ARM and ARM64  
 
 filter "configurations:Debug"
@@ -15,10 +15,10 @@ filter "configurations:Release"
 filter {}
 
 filter { "system:windows", "architecture:x86_64" }
-	targetdir "../lib/VisualC/x64"
+	targetdir "lib/VisualC/x64"
 filter { "system:linux", "architecture:x86_64" }
-	targetdir "../lib/GCC/x64"
+	targetdir "lib/GCC/x64"
 
-SDL_DIR = "../../SDL"
+SDL_DIR = "../SDL"
 
-include "premake5.project.lua"
+include "imgui.Project.lua"
